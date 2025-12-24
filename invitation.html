@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Birthday Invitation</title>
+
+<style>
+body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#108ba1;
+    font-family:Segoe UI, sans-serif;
+}
+
+.poster{
+    position:relative;
+    width:90vw;
+    max-width: 400px;
+    aspect-ratio: 2 / 3;   /* maintains 400x600 ratio */
+    background-image:url(birthday\ invitation.png.png);
+    background-size:cover;
+    background-position:center;
+    border-radius:12px;
+}
+
+/* text inside image */
+.text{
+    position:absolute;
+    padding-top: 80px;
+    top:170px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    text-align:center;
+    font-size:clamp(16px, 4vw, 22px);
+    font-weight:bold;
+    color:rgb(245, 209, 4);
+    text-shadow:2px 2px 6px black;
+}
+
+.highlight{
+    color:#ffcc00;
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+    <source src="birthday music.mp3.mp3" type="audio/mpeg">
+</audio>
+
+
+<div class="poster">
+    <div class="text" id="output"></div>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const name = params.get("name");
+
+document.getElementById("output").innerHTML =
+    `Mr. <span class="highlight">${name}</span><br>
+    is invited to the birthday party of<br>
+    <span class="highlight">Raj Mandal</span>`;
+</script>
+
+</body>
+</html>

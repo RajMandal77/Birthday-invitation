@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Enter Name</title>
+
+<style>
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+    font-family:Segoe UI, sans-serif;
+}
+
+.box{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    width:320px;
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    font-size:16px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    font-size:16px;
+    background:#ff4b5c;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Birthday Invitation</h2>
+    <input type="text" id="name" placeholder="Enter name">
+    <button onclick="redirect()">Generate Invitation</button>
+</div>
+
+<script>
+function redirect(){
+    let name = document.getElementById("name").value.trim();
+    if(name===""){
+        alert("Please enter name");
+        return;
+    }
+    window.location.href = "invitation.html?name=" + encodeURIComponent(name);
+}
+</script>
+
+</body>
+</html>
