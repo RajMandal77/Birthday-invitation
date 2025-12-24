@@ -15,17 +15,24 @@ body{
     font-family:Segoe UI, sans-serif;
 }
 
-.poster{
-    position:relative;
-    width:100vw;
-    max-width: 400px;
-    aspect-ratio: 2 / 3;   /* maintains 400x600 ratio */
-    background-image:url(birthday\ invitation.png.png);
-    background-size:cover;
-    background-position:center;
-    border-radius:12px;
+.poster {
+    position: relative;
+    width: 90vw;
+    max-width: 400px;          /* desktop ke liye */
+    aspect-ratio: 2 / 3;       
+    background-image: url('birthday invitation.png.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
 }
 
+/* Mobile devices ke liye (max-width 600px) */
+@media screen and (max-width: 600px) {
+    .poster {
+        max-width: 90vw;       /* mobile me zyada width */
+        border-radius: 12px;   /* thoda chhota rounding */
+    }
+}
 /* text inside image */
 .text{
     position:absolute;
