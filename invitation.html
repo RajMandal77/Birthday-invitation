@@ -17,23 +17,24 @@ body{
 
 .poster {
     position: relative;
-    width: 90vw;
+    width: 90vw;               /* default for most screens */
     max-width: 400px;          /* desktop ke liye */
     aspect-ratio: 2 / 3;       
     background-image: url('birthday invitation.png.png');
     background-size: cover;
     background-position: center;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
-/* Mobile devices ke liye (max-width 600px) */
-@media screen and (max-width: 600px) {
+/* For phones / smaller screens */
+@media (max-width: 600px) {  /* adjust max-width as per your phone size */
     .poster {
-        max-width: 90vw;       /* mobile me zyada width */
-        border-radius: 12px;   /* thoda chhota rounding */
+        width: 95vw;           /* thoda bara width on phone */
+        max-width: 500px;      /* larger max-width for phones */
     }
 }
-/* text inside image */
+
+
 .text{
     position:absolute;
     padding-top: 80px;
