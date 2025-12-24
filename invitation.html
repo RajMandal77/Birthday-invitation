@@ -17,20 +17,19 @@ body{
 
 .poster {
     position: relative;
-    width: 90vw;               /* default for most screens */
-    max-width: 400px;          /* desktop ke liye */
-    aspect-ratio: 2 / 3;       
+    width: 400px;              /* laptop / desktop */
+    aspect-ratio: 2 / 3;
     background-image: url('birthday invitation.png.png');
     background-size: cover;
     background-position: center;
     border-radius: 12px;
 }
 
-/* For phones / smaller screens */
-@media (max-width: 600px) {  /* adjust max-width as per your phone size */
+/* PHONE */
+@media (max-width: 768px) {
     .poster {
-        width: 95vw;           /* thoda bara width on phone */
-        max-width: 500px;      /* larger max-width for phones */
+        width: 95vw;           /* phone me bada */
+        max-width: none;       /* IMPORTANT */
     }
 }
 
